@@ -1,0 +1,31 @@
+程序结构:
+选课系统
+├── 主程目录
+│   ├── __init__.py
+│   ├── bin #ATM 启动程序 目录
+│   │   ├── __init__.py
+│   │   ├── main.py  # 执行程序
+│   ├── conf #配置文件（主要是目录的配置及一个获取文件名的方法）
+│   │   ├── __init__.py
+│   │   ├── setting.py
+│   ├── core #主要程序逻辑都 在这个目录 里
+│   │   ├── __init__.py
+│   │   ├── BasicLogic.py     #定义的类及方法，实例化了两个学校
+│   │   ├── school_func.py      #学校管理接口，提供创建课程、老师、班级及查看
+│   │   ├── student_func.py   #学生视图，提供学生注册、缴费、选择班级
+│   │   ├── teacher.py     #老师视图，提供查看班级及学生列表
+│   └──  data  #数据文件存储
+│        ├── courses   #课程信息db(应该是json文件)
+│        │   ├── Linux.text
+│        │   ├── Python.text
+│        ├── grades   #班级信息db(应该是json文件)
+│        │   ├── Python-16.text
+│        ├── students   #学生信息db(应该是json文件)
+│        │   ├── laoan.text
+│        └── teachers   #laoshi 信息db(应该是json文件)
+│        │   ├── Alex.text
+│        └──|── Oldboy.text
+└──————— requirements  #程序的需求文档
+└──————— README  #程序结构描述与备注
+└──————— __init__.py
+有好多地方应该是多一些判断的，判断用户输入的内容、创建内容是否存在
